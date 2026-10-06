@@ -1,0 +1,45 @@
+swagger: "2.0"
+info:
+  title: "API Serverless"
+  description: "Gateway para el backend desplegado en Cloud Run"
+  version: "1.0.0"
+schemes:
+  - "https"
+paths:
+  /{path+}:
+    get:
+      summary: "Proxy general GET"
+      operationId: "proxyGet"
+      x-google-backend:
+        address: ${backend_url}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        default:
+          description: "Forwarding response"
+    post:
+      summary: "Proxy general POST"
+      operationId: "proxyPost"
+      x-google-backend:
+        address: ${backend_url}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        default:
+          description: "Forwarding response"
+    put:
+      summary: "Proxy general PUT"
+      operationId: "proxyPut"
+      x-google-backend:
+        address: ${backend_url}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        default:
+          description: "Forwarding response"
+    delete:
+      summary: "Proxy general DELETE"
+      operationId: "proxyDelete"
+      x-google-backend:
+        address: ${backend_url}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        default:
+          description: "Forwarding response"

@@ -1,0 +1,36 @@
+# Python / Backend
+Backend/__pycache__/
+Backend/*/__pycache__/
+Backend/*/*/__pycache__/
+Backend/*.pyc
+Backend/*.pyo
+Backend/*.pyd
+Backend/.env
+Backend/*.db
+Backend/*.sqlite3
+Backend/uploads/*
+!Backend/uploads/.gitkeep
+
+# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/.terraform.tfstate.lock.info
+
+# Android / Mobile
+Mobile/.gradle/
+Mobile/build/
+Mobile/*/build/
+Mobile/local.properties
+Mobile/*.iml
+Mobile/.idea/
+Mobile/captures/
+Mobile/.externalNativeBuild/
+Mobile/.cxx/
+
+# Sistema y logs
+.DS_Store
+Thumbs.db
+*.log

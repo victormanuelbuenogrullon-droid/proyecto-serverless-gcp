@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">UTESA App</string>
+
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="email_hint">Correo Electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_go_register">¿No tienes cuenta? Regístrate</string>
+    <string name="server_config">Configurar Servidor</string>
+
+    <string name="register_title">Registro de Usuario</string>
+    <string name="name_hint">Nombre</string>
+    <string name="lastname_hint">Apellido</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="logout">Cerrar Sesión</string>
+
+    <string name="dashboard_title">Panel Principal</string>
+    <string name="welcome_user">Bienvenido, %1$s</string>
+    <string name="stats_header">Estadísticas</string>
+    <string name="total_users_label">Usuarios</string>
+    <string name="total_files_label">Archivos</string>
+    <string name="server_status_label">Estado</string>
+    <string name="actions_header">Opciones</string>
+    <string name="btn_users_crud">Gestión de Usuarios</string>
+    <string name="btn_files_management">Gestión de Archivos</string>
+    <string name="btn_concurrency_lab">Prueba de Concurrencia</string>
+    <string name="btn_recent_activity">Actividad Reciente</string>
+    <string name="btn_my_profile">Mi Perfil</string>
+    <string name="recent_activity_header">Actividad Reciente</string>
+    <string name="search_by_id_hint">Consultar por ID</string>
+    <string name="btn_search_id">Consultar</string>
+
+    <string name="files_title">Gestión de Archivos</string>
+    <string name="btn_upload_file">Subir Archivo</string>
+    <string name="delete_file_confirm_title">Eliminar Archivo</string>
+    <string name="delete_file_confirm_msg">¿Deseas eliminar este archivo permanentemente del servidor?</string>
+    <string name="empty_files_list">No hay archivos en el servidor</string>
+
+    <string name="users_list_title">Usuarios</string>
+    <string name="user_detail_title">Detalle de Usuario</string>
+    <string name="create_user_title">Nuevo Usuario</string>
+    <string name="edit_user_title">Editar Usuario</string>
+    <string name="delete_confirm_title">Eliminar Usuario</string>
+    <string name="delete_confirm_msg">¿Deseas eliminar este usuario?</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="btn_select_photo">Seleccionar Foto</string>
+
+    <string name="benchmark_title">Prueba de Concurrencia</string>
+    <string name="benchmark_process_title">Opción A: Subida y Procesamiento de Imágenes</string>
+    <string name="benchmark_process_desc">Compara la velocidad de subida al servidor (POST /upload) de un lote de imágenes de forma secuencial vs concurrente (Coroutines / async).</string>
+    <string name="btn_select_gallery_images">Seleccionar de Galería</string>
+    <string name="batch_size_label">Lote de imágenes a procesar</string>
+    <string name="btn_run_sequential">Subida Secuencial</string>
+    <string name="btn_run_concurrent">Subida Concurrente</string>
+    <string name="sequential_time_label">Tiempo Secuencial:</string>
+    <string name="concurrent_time_label">Tiempo Concurrente:</string>
+    <string name="speedup_label">Aceleración (Speedup):</string>
+
+    <string name="loading">Cargando...</string>
+    <string name="error_generic">Ocurrió un error</string>
+</resources>

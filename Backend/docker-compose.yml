@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: fastapi_postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: utesa_user
+      POSTGRES_PASSWORD: utesa_password_2026
+      POSTGRES_DB: utesa_concurrency_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U utesa_user -d utesa_concurrency_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi_concurrency_api
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://utesa_user:utesa_password_2026@db:5432/utesa_concurrency_db
+      - SECRET_KEY=super_secret_jwt_key_utesa_concurrency_2026_victor_bueno
+      - HOST=0.0.0.0
+      - PORT=8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./estaticos:/app/estaticos
+      - .:/app
+
+volumes:
+  postgres_data:
