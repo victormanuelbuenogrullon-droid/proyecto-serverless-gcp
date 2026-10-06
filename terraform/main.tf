@@ -15,7 +15,7 @@ locals {
 }
 
 resource "google_project_service" "apis" {
-  for_each                   = toset(locals.services)
+  for_each                   = toset(local.services)
   project                    = var.project_id
   service                    = each.value
   disable_dependent_services = false
