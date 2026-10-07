@@ -1,7 +1,7 @@
 package com.victorbueno.app.utils
 
 object Constantes {
-    const val URL_BASE = "http://localhost:8000/"
+    const val URL_BASE = "https://app-serverless-backend-4eynz7qyqq-uc.a.run.app/"
 
     const val NOMBRE_PREFS = "app_preferencias"
     const val CLAVE_TOKEN_JWT = "token_jwt"
