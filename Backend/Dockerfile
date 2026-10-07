@@ -18,8 +18,8 @@ COPY . .
 # Create uploads and static directories
 RUN mkdir -p estaticos/avatares
 
-# Expose FastAPI port
-EXPOSE 8000
+# Expose Cloud Run port
+EXPOSE 8080
 
-# Run uvicorn server
-CMD ["uvicorn", "app.principal:app", "--host", "0.0.0.0", "--port", "8000"]
+# Iniciar Uvicorn directamente en el puerto 8080
+CMD ["uvicorn", "app.principal:app", "--host", "0.0.0.0", "--port", "8080"]
