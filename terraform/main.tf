@@ -116,12 +116,12 @@ resource "google_project_iam_member" "cloud_logging" {
 
 # 6. Cloud Run
 resource "google_cloud_run_v2_service" "backend" {
-  depends_on = [
+depends_on = [
     google_project_service.apis,
     google_sql_database_instance.postgres,
     google_secret_manager_secret_version.jwt_secret_val,
-    google_secret_manager_secret_version.db_url_val
-    google_project_iam_member.secret_accessor
+    google_secret_manager_secret_version.db_url_val,
+    google_project_iam_member.secret_accessor,
   ]
   name     = "${var.app_name}-backend"
   location = var.region
