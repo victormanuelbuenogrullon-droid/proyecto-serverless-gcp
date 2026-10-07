@@ -8,46 +8,74 @@ schemes:
 produces:
   - "application/json"
 paths:
-  /{path}:
-    parameters:
-      - name: path
-        in: path
-        required: true
-        type: string
-        description: "Ruta del recurso solicitado"
+  "/":
+    get:
+      summary: "Root Health Check"
+      operationId: "rootGet"
+      x-google-backend:
+        address: ${backend_url}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        default:
+          description: "Respuesta del backend"
+  "/{path=**}":
     get:
       summary: "Proxy GET"
       operationId: "proxyGet"
+      parameters:
+        - name: path
+          in: path
+          required: true
+          type: string
+          description: "Ruta de destino"
       x-google-backend:
         address: ${backend_url}
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         default:
-          description: "Forwarding response"
+          description: "Respuesta del backend"
     post:
       summary: "Proxy POST"
       operationId: "proxyPost"
+      parameters:
+        - name: path
+          in: path
+          required: true
+          type: string
+          description: "Ruta de destino"
       x-google-backend:
         address: ${backend_url}
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         default:
-          description: "Forwarding response"
+          description: "Respuesta del backend"
     put:
       summary: "Proxy PUT"
       operationId: "proxyPut"
+      parameters:
+        - name: path
+          in: path
+          required: true
+          type: string
+          description: "Ruta de destino"
       x-google-backend:
         address: ${backend_url}
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         default:
-          description: "Forwarding response"
+          description: "Respuesta del backend"
     delete:
       summary: "Proxy DELETE"
       operationId: "proxyDelete"
+      parameters:
+        - name: path
+          in: path
+          required: true
+          type: string
+          description: "Ruta de destino"
       x-google-backend:
         address: ${backend_url}
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         default:
-          description: "Forwarding response"
+          description: "Respuesta del backend"
